@@ -1,0 +1,5 @@
+bin
+reports
+node_modules
+.idea
+.vscode
