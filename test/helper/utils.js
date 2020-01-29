@@ -23,7 +23,7 @@ module.exports.getRandomEmail = function () {
  */
 
 module.exports.getRandomName = function (length) {
-    return getRandomString('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 1) + getRandomString('abcdefghijklmnopqrstuvwxyz', length) ;
+    return getRandomString('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 1) + getRandomString('abcdefghijklmnopqrstuvwxyz', length);
 };
 
 /**
@@ -33,5 +33,5 @@ module.exports.setLocalStorage = function (driver, name, value) {
     driver.execute(function (name, value) {
         window.localStorage.setItem(name, value);
         return true;
-      })
+    })
 };

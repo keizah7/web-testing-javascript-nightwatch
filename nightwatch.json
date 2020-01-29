@@ -14,7 +14,7 @@
 	},
 	"test_settings": {
 		"default": {
-			"launch_url": "http://www.qaontime.com",
+			"launch_url": "http://www.qaontime.com/register",
 			"timeOut": -1,
 			"selenium_port": 4444,
 			"desiredCapabilities": {
@@ -33,7 +33,7 @@
 				}
 			},
 			"globals": {
-				"web_url": "http://www.qaontime.com",
+				"web_url": "http://www.qaontime.com/register",
 				"api_url": "/",
 				"timeOut": 30000
 			}

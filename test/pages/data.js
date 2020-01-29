@@ -1,26 +1,25 @@
 (function () {
-  var data = {
-    home: {
-      url: '/',
-      aboutUsMenu: '.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-10'
-    },
-    about: {
-      url: '/about-us',
-      headerTitle: '.entry-header.group'
-    },
-    contact: {
-      url: '/contact',
-      firstNameField: '.smFieldFirstName.smform-control.smform-field-sizelarge.required',
-      lastNameField: '.smFieldLastName.smform-control.smform-field-sizelarge.required',
-      emailField: '.smform-control.smform-controllabelpos.required.smform-field-sizemedium',
-      messageField: '.smform-control.smform-controllabelpos.smform-field-sizelarge.smform-control.smform-controllabelpostextarea',
-      submitButton: '.smform-submit',
-      successMessage: '.smform-ajax-msg'
-    }
-  };
-  exports.getAll = function () {
-    return data;
-  };
-
+    var data = {
+        home: {
+            url: '/',
+            loginField: 'input[id=field-login-login]',
+            passwordField: 'input[id=field-login-password]',
+            button: 'input[id=field-login-loginSubmit]',
+        },
+        client: {
+            url: '/client/index.php?folder=5',
+            searchField: 'input[id=field-search-searchBox]',
+            searchButton: 'input[id=field-search-searchSubmit]',
+            searchPattern: 'Nightwatch',
+            foundItemXpath: '/html/body/div[2]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/a[2]',
+        },
+        user: {
+            login: 'murashka.arturas@gmail.com',
+            password: 'murashka.arturas@gmail.com',
+        },
+    };
+    exports.getAll = function () {
+        return data;
+    };
 })();
 
