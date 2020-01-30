@@ -11,7 +11,7 @@ module.exports.getRandomString = function (possible, length) {
 };
 
 module.exports.getRandomNumber = function(to) {
-    return Math.floor(Math.random() * to);
+    return Math.floor(Math.random() * to) + 1;
 }
 
 /**

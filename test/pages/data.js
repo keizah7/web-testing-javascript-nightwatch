@@ -10,7 +10,7 @@
             url: '/client/index.php?folder=5',
             searchField: 'input[id=field-search-searchBox]',
             searchButton: 'input[id=field-search-searchSubmit]',
-            searchPattern: 'Nightwatch',
+            searchPattern: 'nightwatch',
             foundItemXpath: '/html/body/div[2]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/a[2]',
         },
         issue: {
