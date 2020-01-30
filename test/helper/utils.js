@@ -2,13 +2,17 @@
  * function generates random string for provided length.
  */
 
-getRandomString = function (possible, length) {
+module.exports.getRandomString = function (possible, length) {
     let text = "";
     for (let i = 0; i < length; i++) {
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     return text;
 };
+
+module.exports.getRandomNumber = function(to) {
+    return Math.floor(Math.random() * to);
+}
 
 /**
  * function generates random test email.

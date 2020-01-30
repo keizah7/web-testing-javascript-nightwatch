@@ -13,6 +13,14 @@
             searchPattern: 'Nightwatch',
             foundItemXpath: '/html/body/div[2]/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/a[2]',
         },
+        issue: {
+            addIssueLinkXpath: '/html/body/div[2]/table/tbody/tr/td[2]/div/div[1]/a[2]',
+            nameField: '//*[@id="field-issues-issueName"]',
+            severityField: '//*[@id="field-issues-value4"]',
+            descriptionField: '//*[@id="field-issues-descriptionText"]',
+            button: '//*[@id="field-issues-okSubmit"]',
+            titleXpath: '/html/body/div[2]/table/tbody/tr[2]/td/div/h2'
+        },
         user: {
             login: 'murashka.arturas@gmail.com',
             password: 'murashka.arturas@gmail.com',

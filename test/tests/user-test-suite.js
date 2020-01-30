@@ -22,7 +22,7 @@ module.exports = {
     //   driver.assert.containsText(data.about.headerTitle, 'About');
     // },
 
-    'Should be able to open login page': function (driver) {
+    'Should be able to login ': function (driver) {
         driver.url(driver.globals.web_url);
 
         driver.setValue(data.home.loginField, data.user.login);
@@ -41,5 +41,20 @@ module.exports = {
 
         driver.useXpath().waitForElementPresent(data.client.foundItemXpath, 'Link is present');
         driver.assert.containsText(data.client.foundItemXpath, data.client.searchPattern);
+    },
+
+    'Should be able to add an issue': function (driver) {
+        let title = utils.getRandomString('QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmmmmmm  ', 25);
+
+        driver
+            .url(driver.globals.web_url + data.client.url)
+            .click(data.issue.addIssueLinkXpath)
+            .waitForElementVisible('/html/body')
+            .setValue(data.issue.nameField, title)
+            .clearValue(data.issue.severityField)
+            .setValue(data.issue.severityField, utils.getRandomNumber(3))
+            .setValue(data.issue.descriptionField, utils.getRandomString(' QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmmmmmm 1234567890', 255))
+            .click(data.issue.button)
+            .assert.containsText(data.issue.titleXpath, title);
     },
 };
